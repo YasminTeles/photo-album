@@ -23,5 +23,14 @@ test: ## Run tests.
 build: ## Build application.
 	@yarn run build
 
+docker-build: ## Build container's Docker.
+	@docker build -t app .
+
+docker-run: ## Run container's Docker.
+	@docker run --name photo-album -p 3000:3000 -it app
+
+docker-kill: ## Kill container's Docker.
+	@docker kill photo-album
+
 lint: ## Run lint.
 	@yarn run lint
