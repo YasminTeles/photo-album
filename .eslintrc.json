@@ -1,0 +1,76 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest/globals": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:react-perf/recommended",
+      "plugin:jest/recommended",
+      "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "jsx-a11y",
+      "import",
+      "eslint-plugin-import-helpers",
+      "react-hooks",
+      "react-perf",
+      "jest"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-filename-extension": [
+        "error",
+        { "extensions": [".js", ".jsx"] }
+      ],
+
+      "react/no-multi-comp": "error",
+		  "import/no-named-as-default": "off",
+      "semi": ["error","never"],
+      "quotes": ["error", "double"],
+      "eqeqeq": ["error", "always"],
+      "no-unused-expressions": [
+        "error",
+        { "allowTaggedTemplates": true }
+      ],
+
+      "react/jsx-props-no-spreading": [
+        "error",
+        { "exceptions": ["Component"] }
+      ],
+
+      "react/function-component-definition": [
+        "warn",
+        {
+          "namedComponents": "arrow-function"
+        }
+      ],
+
+      "import-helpers/order-imports": [
+        "warn",
+        {
+          "newlinesBetween": "always",
+          "groups": [
+            "/^react/",
+            "module",
+            "/^@shared/",
+            ["parent", "sibling", "index"]
+          ],
+          "alphabetize": {
+            "order": "asc",
+            "ignoreCase": true
+          }
+        }
+      ]
+    }
+}
