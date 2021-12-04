@@ -60,6 +60,10 @@ make docker-kill
 
 </details>
 
+## Versions
+
+We use [Semantic version](http://semver.org) for versioning. For versions available, see [changelog](CHANGELOG.md).
+
 ## Contribute Us
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create.
